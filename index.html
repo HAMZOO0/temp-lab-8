@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Management System</h1>
+        <div class="recipe-form-container">
+            <form id="recipe-form">
+                <input type="hidden" id="recipe-id">
+                <input type="text" id="recipe-title" placeholder="Recipe Title" required>
+                <textarea id="recipe-ingredients" placeholder="Ingredients (comma-separated)" required></textarea>
+                <textarea id="recipe-instructions" placeholder="Instructions" required></textarea>
+                <input type="file" id="recipe-image" accept="image/*">
+                <button type="submit">Add Recipe</button>
+            </form>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-box" placeholder="Search for recipes...">
+        </div>
+        <div id="recipe-list" class="recipe-list"></div>
+    </div>
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="Recipe Image">
+            <h3>Ingredients</h3>
+            <p id="modal-ingredients"></p>
+            <h3>Instructions</h3>
+            <p id="modal-instructions"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<footer>
+    <p>&copy; 2023 Recipe Management System</p>
+    <p>Developed by Hamza Sajid</p>
+</footer>
+</html>
